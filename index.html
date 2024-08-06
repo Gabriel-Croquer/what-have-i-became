@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>To be or not to be</title>
+
+  <!-- Google fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-size: 20px;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      text-rendering: optimizeLegibility;
+    }
+
+    .content {
+      max-width: 640px;
+      margin: auto;
+    }
+
+    .header {
+      padding: 3em 0;
+    }
+
+    a {
+      color: #f05349;
+    }
+
+    .footer {
+      background: #f4f4f4;
+      text-align: center;
+      font-size: 0.8em;
+      margin-top: 4em;
+      padding: 4em 0;
+    }
+
+    figure {
+      margin: 0;
+      padding-bottom: 1.2em;
+    }
+
+    figcaption {
+      font-size: 0.8em;
+      text-align: center;
+      margin-top: 0.5em;
+      color: #666;
+    }
+
+    h1 {
+      font-family: 'Lora', Georgia, serif;
+      font-weight: bold;
+      font-size: 3em;
+      line-height: 1.1;
+    }
+
+    .subhead {
+      font-family: 'Lora', Georgia, serif;
+    }
+
+    iframe,
+    img,
+    video {
+      max-width: 100%;
+    }
+
+    p {
+      line-height: 1.6;
+      margin: 0;
+      padding-bottom: 1.2em;
+    }
+
+    ul {
+      margin: 0;
+      padding-bottom: 1em;
+      line-height: 1.6;
+    }
+
+    iframe {
+      padding-bottom: 1.2em;
+    }
+
+    code {
+      font-family: 'Courier New', monospace;
+      background: #fff880;
+    }
+
+    .full-width figure {
+      text-align: center;
+    }
+
+    /* margin on mobile */
+    @media (max-width: 640px) {
+      body {
+        font-size: 18px;
+      }
+
+      .content {
+        padding-left: 0.5em;
+        padding-right: 0.5em;
+      }
+
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        overflow: hidden;
+      }
+
+      /* Prevent scrollbars if not needed */
+      /* Container for centering content */
+      .video-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        /* Full viewport height */
+        width: 100vw;
+        /* Full viewport width */
+        position: relative;
+        /* Ensure it's positioned relative to the viewport */
+        background-color: #f0f0f0;
+        /* Optional background color */
+      }
+
+      /* Video styling */
+      video {
+        max-width: 100%;
+        /* Ensures the video fits within the container */
+        height: auto;
+        /* Maintains aspect ratio */
+      }
+
+      /* Optional figcaption styling */
+      figcaption {
+        margin-top: 10px;
+        /* Space between video and caption */
+        color: #333;
+        /* Caption text color */
+        text-align: center;
+        /* Center caption text */
+      }
+    }
+  </style>
+  <link href="scrolly-styles.css" rel="stylesheet">
+  <script src="https://unpkg.com/intersection-observer@0.5.1/intersection-observer.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollama/3.2.0/scrollama.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/scrolly-video@latest/dist/scrolly-video.js"></script>
+</head>
+
+<body>
+  <div class="content">
+    <div class="header">
+      <h1>What have I become? My YouTube data has an answer</h1>
+      <p class="subhead">I've collected all YouTube videos I've seen in the past seven years to discover a little more about myself</p>
+    </div>
+    <div class="byline">
+      <p>By <a href="https://github.com/Gabriel-Croquer">Gabriel Croquer</a></p>
+    </div>
+    <p>YouTube is definitely the app/social media that I've spent most of my life since I had my first cellphone, in 2015, when I was 16 years old. I'll never forget the feeling that I've had after the first sprint of hours watching stupid stuff there: a brain shrunked and dumbed down, eager to get out of social media junkie cycle.
+    <p />
+    <p>I think we've all been into this. But YouTube also helped me to learn and watch lot of things very important to me: guitar, coding, journalism, football matches, jiu-jitsu.</p>
+    <p>Liking it or not, the fact is the app shaped a relevant part of me.
+    <p>Google knows that and tracks everything I do. So I've downloaded all my Youtube history since 2018, year I created an account, to discover more about myself and how (if) I've changed since then. hello</p>
+    <!-- Button to play the audio -->
+    <button onclick="playAudio()">Play Audio</button>
+
+  </div>
+  <section id="scrolly-video" class="scrolly-container">
+    <div class="sticky-thing">
+    </div>
+    <div class="steps-container">
+      <div class="step" id="step-first">
+        <p>In 2017, I became a grunge kid, obsessed with Nirvana and Kurt Cobain. The videos I watched the most that year, in 2018 and 2019, were about the band. Some obscure demos made by Kurt got the cut, like the beautifully , haunting and sad version of "Old Age".</p>
+      </div>
+      <div class="step" id="step-second">
+        <p>The mood changed in 2020, from grunge to meditation, concentration and focus songs. That's adulthood comin -- and you getting more boring. The most popular video became "Celestial White Noise". Literally a video of (celestial) wind playing for 6 hours. I heard a lot of these stuff to concentrate on studying and working, something I would do all day long, since it was the last year of college.
+        </p>
+      </div>
+      <div class="step" id="step-third">
+        <p>In 2021 there seems to be a breath of music, after I became obsessed by uplifting, marvelous music from bands like Parcels and Her's. A cover from the latter was my favourite video that year.</p>
+      </div>
+      <div class="step" id="step-fourth">
+        <p>But on the next two years, something weirder happened: my most watched videos became ads. Ok, YouTube can be blamed too, for increasing ads on videos. Adulthood and capitalism can be blamed too, for making me look for apartments and pharmacies prices.</p>
+      </div>
+      <div class="step" id="step-fifth">
+        <p>But it seemed to me there was much to blame me for. Maybe, even more mature, my addiction in YouTube has gotten worse over the years?</p>
+      </div>
+    </div>
+  </section>
+  <!-- Add audio element -->
+  <audio id="background-audio" src="audio-1.mp3" preload="auto"></audio>
+  <script src="scripts.js"></script>
+  <div class="content">
+    <p>Yeah, YouTube data shows that I watched more and more videos over the years gone by.</p>
+    <p>I truly imagine I would watch less videos getting older and having to work. Got little disappointed learning it is the other way around.</p>
+    <iframe title="Amount of videos watched by month" aria-label="Table" id="datawrapper-chart-crzs9" src="https://datawrapper.dwcdn.net/crzs9/1/" scrolling="yes" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="481" data-external="1"></iframe>
+    <script type="text/javascript">
+      !function () {
+        "use strict";
+        window.addEventListener("message", (function (a) {
+          if (void 0 !== a.data["datawrapper-height"]) {
+            var e = document.querySelectorAll("iframe");
+            for (var t in a.data["datawrapper-height"]) for (var r = 0; r < e.length; r++) if (e[r].contentWindow === a.source) {
+              var i = a.data["datawrapper-height"][t] + "px";
+              e[r].style.height = i
+            }
+          }
+        }))
+      }();
+    </script>
+    <p>The data made me remember times where I was feeling stressed and anxious about work, turning to my phone and spending hours swiping up videos that made me angry at them, because they were so stupid and oblivious, but kept me swiping until I had to primary needs.</p>
+    <p>And that made me remember how I wasn't a fan of TikTok, but was occasionally trapped on YouTube's version of it, Shorts, launched in July of 2021.</p>
+  </div>
+  <h3>This video above was one of the flashes that popped into my head when I thought about my rabbit holes of addiction.</h3>
+  <div class="video-wrapper">
+    <figure style="text-align: center;">
+      <video src="dance_fat_guy.mp4" preload="auto" tabindex="0" playsinline autoplay loop muted></video>
+      <figcaption>I didn't want to count the amount of times I've watched videos from this guy.</figcaption>
+    </figure>
+  </div>
+
+  <p>Ok, so I became a guy who sees a lot of ads of pharmacies, apartments, more addicted to YouTube. But have my core of good, not addicting, interests changed? The answer is no!
+    <iframe title="Datawrapper Chart Type Ranking | 2013 - 2020" aria-label="Interactive line chart" id="datawrapper-chart-73L4h" src="https://datawrapper.dwcdn.net/73L4h/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="543" data-external="1"></iframe>
+    <script type="text/javascript">
+      !function () {
+        "use strict";
+        window.addEventListener("message", (function (a) {
+          if (void 0 !== a.data["datawrapper-height"]) {
+            var e = document.querySelectorAll("iframe");
+            for (var t in a.data["datawrapper-height"]) for (var r = 0; r < e.length; r++) if (e[r].contentWindow === a.source) {
+              var i = a.data["datawrapper-height"][t] + "px";
+              e[r].style.height = i
+            }
+          }
+        }))
+      }();
+    </script>
+    <p>This a good way of ending this in a high note, maybe. I kept liking a lot of music, sports, good and funny stuff. Even the addictive social media couldn't change it.</p>
+    <div class="footer">
+      <div class="content">
+        <p>You can find the code for this template <a href="https://github.com/Gabriel-Croquer/scrape_live_youtube/blob/main/scrolly_video/">here</a>.</p>
+      </div>
+    </div>
+
+    <script>
+      /*
+      Different videos need different things - does the reader need to see
+      the entire screen of the video, or you want to make sure it covers the
+      entire window?
+
+      You can experiment with yours by removing the // from the full and
+      cover options below to see how it looks with your videos. 
+
+      You can see parameters at 
+      https://github.com/dkaoster/scrolly-video?tab=readme-ov-file#-options--attributes
+
+      You might also need to adjust object-fit being 'cover' vs 'contain' in the CSS below
+
+      Be sure to check mobile!!
+      */
+      new ScrollyVideo({
+        scrollyVideoContainer: document.querySelector("#scrolly-video .sticky-thing"),
+        src: "Meu Vídeo.mp4",
+        full: true,
+        // cover: true
+      });
+
+      document.addEventListener('DOMContentLoaded', () => {
+        const audio = document.getElementById('background-audio');
+        const steps = document.querySelectorAll('.step');
+        const audioSegments = {
+          'step-first': [0, 15], // [startTime, endTime] in seconds
+          'step-second': [16, 19],
+          'step-third': [20, 30],
+          'step-fourth': [31, 50],
+          'step-fifth': [51, 60] // Added step-fifth
+        };
+
+        let currentSegment = null;
+        let isPlaying = false;
+
+        const playAudioSegment = (startTime, endTime) => {
+          audio.currentTime = startTime;
+          audio.play().catch(error => {
+            console.error('Audio playback was prevented:', error);
+          });
+          const checkEndTime = setInterval(() => {
+            if (audio.currentTime >= endTime) {
+              audio.pause();
+              clearInterval(checkEndTime);
+            }
+          }, 100);
+        };
+
+        const handleIntersection = (entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              const stepId = entry.target.id;
+              const [startTime, endTime] = audioSegments[stepId] || [0, 0];
+
+              if (currentSegment !== stepId) {
+                currentSegment = stepId;
+
+                if (isPlaying) {
+                  audio.pause();
+                  isPlaying = false;
+                }
+
+                playAudioSegment(startTime, endTime);
+                isPlaying = true;
+              }
+              console.log(currentSegment);
+            }
+          });
+        };
+
+        const observer = new IntersectionObserver(handleIntersection, {
+          threshold: 0.5 // Adjust the threshold as needed
+        });
+
+        steps.forEach(step => observer.observe(step));
+      });
+
+    </script>
+    <style>
+      .step {
+        height: 100vh;
+        margin-bottom: 0;
+      }
+
+      /* .sticky-thing > canvas {
+        object-fit: cover;
+      } */
+    </style>
+
+</body>
+
+</html>
