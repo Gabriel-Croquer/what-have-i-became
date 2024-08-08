@@ -23,6 +23,22 @@
       max-width: 640px;
       margin: auto;
     }
+    /* Center the button */
+    .button-container {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    /* Style the button */
+    .styled-button {
+        color: red; /* Text color */
+        background-color: white; /* Background color */
+        border: 2px solid red; /* Border color */
+        padding: 10px 20px; /* Button padding */
+        font-size: 16px; /* Font size */
+        cursor: pointer; /* Pointer cursor on hover */
+        border-radius: 5px; /* Rounded corners */
+    }
 
     .header {
       padding: 3em 0;
@@ -168,8 +184,12 @@
     <p>I think we've all been into this. But YouTube also helped me to learn and watch lot of things very important to me: guitar, coding, journalism, football matches and jiu-jitsu.</p>
     <p>Liking it or not, the fact is the app shaped a relevant part of me.
     <p>Google knows that and tracks everything I do. So I've downloaded all my Youtube history since 2017, year I created an account, to discover more about myself and how (if) I've changed since then.</p>
-    <!-- Button to play the audio -->
-    <button onclick="playAudio()">Play Audio</button>
+    
+    <!-- Container to center the button -->
+    <div class="button-container">
+        <!-- Button to play the audio -->
+        <button class="styled-button" onclick="playAudio()">Play Audio</button>
+    </div>
 
   </div>
   <section id="scrolly-video" class="scrolly-container">
